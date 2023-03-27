@@ -4,7 +4,7 @@ import openai
 
 openai.api_key = os.getenv("API_KEY")
 
-# code = st.code()
+
 
 
 

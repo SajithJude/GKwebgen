@@ -132,7 +132,7 @@ submit = st.sidebar.button("Submit")
 
 if submit:
     output = generate_text(query, source)
-    st.markdown(html_string, unsafe_allow_html=True)
+    st.markdown(output, unsafe_allow_html=True)
 
 
 

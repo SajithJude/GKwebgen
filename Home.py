@@ -34,7 +34,8 @@ def generate_text(input, source):
 
 
 
-source ="""<!DOCTYPE html>
+if 'source' not in st.session_state:
+    st.session_state['source'] = """<!DOCTYPE html>
 <html>
 <head>
 <title>W3.CSS Template</title>
@@ -64,23 +65,21 @@ body, html {height: 100%}
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">35 days left</p>
   </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
+
 </div>
 
 </body>
 </html>
 """
 
-st_html(source, width=1400, height=400)
+st_html(st.session_state['source'], width=1400, height=400)
+
+
 query = st.sidebar.text_area("Ask Something", key="query")
 submit = st.sidebar.button("Submit")
 
 if submit:
-    source = generate_text(query, source)
-    st.sidebar.code(source)
-    # st.markdown(output, unsafe_allow_html=True)
-
+    st.session_state['source'] = generate_text(query, st.session_state['source'])
+    st.sidebar.code(st.session_state['source'])
 
 

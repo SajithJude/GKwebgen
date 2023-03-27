@@ -24,7 +24,7 @@ def generate_text(input, source):
         model="text-davinci-003",
         prompt=input,
         temperature=0.56,
-        max_tokens=4000,
+        max_tokens=2100,
         top_p=1,
         frequency_penalty=0.35,
         presence_penalty=0

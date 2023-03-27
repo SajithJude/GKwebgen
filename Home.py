@@ -4,6 +4,16 @@ import openai
 
 openai.api_key = os.getenv("API_KEY")
 
+st.markdown(
+    f'''
+        <style>
+            .sidebar .sidebar-content {{
+                width: 575px;
+            }}
+        </style>
+    ''',
+    unsafe_allow_html=True
+)
 
 
 

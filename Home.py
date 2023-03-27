@@ -137,6 +137,8 @@ h1, h2, h3, h4, h5, h6 {
 </body>
 </html>
 """
+
+st.markdown(source, unsafe_allow_html=True)
 query = st.sidebar.text_area("Ask Something", key="query")
 submit = st.sidebar.button("Submit")
 

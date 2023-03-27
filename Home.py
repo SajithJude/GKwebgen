@@ -46,7 +46,7 @@ source ="""<!DOCTYPE html>
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
+  background-color: yellow;
   min-height: 100%;
   background-position: center;
   background-size: cover;

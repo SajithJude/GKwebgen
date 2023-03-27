@@ -9,7 +9,7 @@ openai.api_key = os.getenv("API_KEY")
 
 
 def generate_text(input, source):
-    input ="Modify this HTML code accoding to these guidelines :" str(input) + "  :"+ str(source)
+    input ="Modify this HTML code accoding to these guidelines : " + str(input) + "  :"+ str(source)
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=input,

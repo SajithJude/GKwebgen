@@ -121,7 +121,7 @@ query = st.sidebar.text_area("Ask Something", key="query")
 submit = st.sidebar.button("Submit")
 
 if submit:
-    output = generate_text(query, source)
+    source = generate_text(query, source)
     st.sidebar.code(output)
     st.markdown(output, unsafe_allow_html=True)
 
